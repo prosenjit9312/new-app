@@ -4,9 +4,9 @@ metadata:
   name: app-service
 spec:
   selector:
-    app: nginx
+    app: myapp
   ports:
-  - protocol: TCP
-    port: 80
+  - port: 80
     targetPort: 80
-  type: ClusterIP
+  type: LoadBalancer   # ✅ ab Azure external IP dega
+
